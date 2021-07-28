@@ -136,6 +136,7 @@ const Section = styled.div`
     h2 {
         font-family: 'Playfair Display', serif;
         font-size: 2.0em;
+        text-align: center;
     }
 
     .💏 > .img {
