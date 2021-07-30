@@ -73,12 +73,12 @@ function Menu () {
                     <p>Lisa &amp; Italo</p>
                 </div>
                 <div className="navMenu">
-                    <a href="#">HOME</a>
-                    <a href="#">OS NOIVOS</a>
-                    <a href="#">LISTA DE PRESENTES</a>
-                    <a href="#">LOCAL</a>
-                    <a href="#">PRESENÇA</a>
-                    <a href="#">RECADO</a>
+                    <a href="/">HOME</a>
+                    <a href="/noivos">OS NOIVOS</a>
+                    <a href="/presentes">LISTA DE PRESENTES</a>
+                    <a href="/local">LOCAL</a>
+                    <a href="/presenca">PRESENÇA</a>
+                    <a href="/recado">RECADO</a>
                 </div>
             </div>
         </Navs>

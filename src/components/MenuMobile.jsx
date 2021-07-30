@@ -136,14 +136,24 @@ background: black;
         flex-direction: column;
         z-index: 1;
         position: absolute;
-        width: 500px;
-        height: 32vh;
+        width: 100%;
         background: black;
         border: 1px solid black;
     }
 
     .navMenuMob.open {
         display: none;
+        transition: background-color 5s ease;
+    }
+
+    .navMenuMob:hover {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        background: red;
+        border: 1px solid black;
     }
     
 `;
@@ -151,7 +161,7 @@ background: black;
 function MenuMobile () {
 
     const [isMenuShowing, setIsMenuShowing] = useState(false)
-    const [isDropDown, setDropDown] = useState(true)
+    const [isDropDown, setDropDown] = useState(false)
 
     function hambClick(){
         setIsMenuShowing(prevState => !prevState)
@@ -167,13 +177,13 @@ function MenuMobile () {
                 </div>
             </div>
         </div>
-        <div className={`navMenuMob ${isDropDown ? 'open'  : '' } `} >
-            <a href="#">HOME</a>
-            <a href="#">OS NOIVOS</a>
-            <a href="#">LISTA DE PRESENTES</a>
-            <a href="#">LOCAL</a>
-            <a href="#">PRESENÇA</a>
-            <a href="#">RECADO</a>
+        <div className={`navMenuMob ${isDropDown ? ''  : 'open' } `} >
+            <a href="/">HOME</a>
+            <a href="/noivos">OS NOIVOS</a>
+            <a href="/presentes">LISTA DE PRESENTES</a>
+            <a href="/local">LOCAL</a>
+            <a href="/presenca">PRESENÇA</a>
+            <a href="/recado">RECADO</a>
         </div>
     </MobileNavs>
     );

@@ -409,7 +409,6 @@ function Home () {
             </Section>
             <Section>
                 <Titulo titulo="Local   "></Titulo>
-                
                 <div className="margin">
                     <div className="image-place">
                         <div className="place-name">
