@@ -27,6 +27,7 @@ function Noivos () {
 
     return (
         <div>oi oi </div>
+		<div> oi oi oi</div>
     )
 
 }
