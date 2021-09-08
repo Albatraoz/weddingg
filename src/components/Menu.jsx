@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import MenuMobile from './MenuMobile';
 import {isMobile} from 'react-device-detect';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 const Navs = styled.div`
@@ -73,12 +74,13 @@ function Menu () {
                     <p>Lisa &amp; Italo</p>
                 </div>
                 <div className="navMenu">
-                    <a href="/">HOME</a>
-                    <a href="/noivos">OS NOIVOS</a>
-                    <a href="/presentes">LISTA DE PRESENTES</a>
-                    <a href="/local">LOCAL</a>
-                    <a href="/presenca">PRESENÇA</a>
-                    <a href="/recado">RECADO</a>
+                    <Link activeClass="active" to="hero" spy={true} smooth={true} offset={-70} duration={50}>INÍCIO</Link>
+                    <Link activeClass="active" to="noivos" spy={true} smooth={true} offset={-70} duration={50}>OS NOIVOS</Link>
+                    <Link activeClass="active" to="presente" spy={true} smooth={true} offset={-70} duration={50}>LISTA DE PRESENTES</Link>
+                    <Link activeClass="active" to="galeria" spy={true} smooth={true} offset={-70} duration={50}>GALERIA</Link>
+                    <Link activeClass="active" to="local" spy={true} smooth={true} offset={-70} duration={50}>LOCAL</Link>
+                    <Link activeClass="active" to="" spy={true} smooth={true} offset={-70} duration={50}>PRESENÇA</Link>
+                    {/* <a href="/recado">RECADO</a> */}
                 </div>
             </div>
         </Navs>

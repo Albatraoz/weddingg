@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 const MobileNavs = styled.div`
@@ -79,6 +80,10 @@ background: black;
         transition: all .5s ease-in-out;
     }
 
+    .menu-btn:hover{
+        background-color: red;
+    }
+
     .menu-btn__burger {
         width: 30px;
         height: 2px;
@@ -152,7 +157,6 @@ background: black;
         z-index: 1;
         position: absolute;
         width: 100%;
-        background: red;
         border: 1px solid black;
     }
     
@@ -178,12 +182,18 @@ function MenuMobile () {
             </div>
         </div>
         <div className={`navMenuMob ${isDropDown ? ''  : 'open' } `} >
-            <a href="/">HOME</a>
+            {/* <a href="/">HOME</a>
             <a href="/noivos">OS NOIVOS</a>
             <a href="/presentes">LISTA DE PRESENTES</a>
             <a href="/local">LOCAL</a>
             <a href="/presenca">PRESENÇA</a>
-            <a href="/recado">RECADO</a>
+            <a href="/recado">RECADO</a> */}
+            <Link activeClass="active" to="hero" spy={true} smooth={true} offset={-70} duration={50}>INÍCIO</Link>
+            <Link activeClass="active" to="noivos" spy={true} smooth={true} offset={-70} duration={50}>OS NOIVOS</Link>
+            <Link activeClass="active" to="presente" spy={true} smooth={true} offset={-70} duration={50}>LISTA DE PRESENTES</Link>
+            <Link activeClass="active" to="galeria" spy={true} smooth={true} offset={-70} duration={50}>GALERIA</Link>
+            <Link activeClass="active" to="local" spy={true} smooth={true} offset={-70} duration={50}>LOCAL</Link>
+            <Link activeClass="active" to="" spy={true} smooth={true} offset={-70} duration={50}>PRESENÇA</Link>
         </div>
     </MobileNavs>
     );

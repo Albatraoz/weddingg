@@ -7,6 +7,7 @@ import svg from '../assets/date.svg'
 import Facas from '../assets/facas.png'
 import PlaceImage from  '../assets/olugar.jpg'
 import Gallery from './Gallery'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Hero = styled.div`
     background-image: url(${Imagehome});
@@ -342,23 +343,24 @@ const Presentes = styled.div`
 function Home () {
     return(
         <>
-            <Hero>
+            <Hero id="hero">
                 <div className="margin">
                     <div className="divdiv">
                         <h2>Save the date</h2>
                         <div className="heroText">
-                            <p>Celular Xiaomi Mi 8 <br/>Lite Global Dual 128GB <br/>de 6.26" 12+5MP / 24MP - Preto</p>
-                            <button>Call to action</button>
+                            <p>Sejam bem vindos ao nosso site! <br/>Estamos muito felizes em compartilhar esse momento tão especial com vocês! <br/> A presença de cada um é muito importante para nós!</p>
+                            {/* <p style={{'margin-left' : '150px', 'padding-bottom' : 'px'}}>Elisa Carvalho <br/></p> */}
+                            <button>Confirmar presença</button>
                         </div>
                     </div>
                     <img className="date" src={svg} />
                 </div>
             </Hero>
-            <Section>
-                <h2>Acima de tudo, porém, revistam-se <br/> do amor. que é o elo perfeito. 3:14</h2>
-            </Section>
-            <Section>
-                <div className="margin">
+            
+            <Section id="noivos">
+            <Titulo titulo="Os noivos   "></Titulo>
+                <div className="margin" >
+                    <h2>Acima de tudo, porém, revistam-se <br/> do amor. que é o elo perfeito. 3:14</h2>
                     <div className="💏">
                         <div className="img">
                             <p></p>
@@ -383,7 +385,7 @@ function Home () {
                     </div>
                 </div>
             </Section>
-            <Section>
+            <Section id="presente">
                 <Titulo titulo={`Lista de\nPresentes`}></Titulo>
                 <Presentes>
                     <div className="card">
@@ -401,13 +403,13 @@ function Home () {
                     </div>
                 </Presentes>
             </Section>
-            <Section>
+            <Section id="galeria">
                 <Titulo titulo={`Galeria de\nfotos`}></Titulo>
                 <div className="margin">
                     <Gallery />
                 </div>
             </Section>
-            <Section>
+            <Section id="local">
                 <Titulo titulo="Local   "></Titulo>
                 <div className="margin">
                     <div className="image-place">
@@ -417,10 +419,16 @@ function Home () {
                     </div>
                     <div className="grid">
                         <p>Estrada intermunicipal de moreno, km 3, mo11, log - Nossa Sra. da Conceição Moreno - PE, 54800-000</p>
-                        <a href="#">Chegar com Maps</a>
-                        <a href="#">Chegar com Waze</a>
+                        <a href="https://goo.gl/maps/z5amNvCLi3BfF611A">Chegar com Maps</a>
+                        <a href="https://waze.com/ul/h7nx19xjkj">Chegar com Waze</a>
                     </div>
                 </div>
+            </Section>
+            <Section id="presenca">
+                <Titulo titulo="Presença         "></Titulo>
+                    <div>
+                        <h2><i>Em construção</i></h2>
+                    </div>
             </Section>
         </>
     )
