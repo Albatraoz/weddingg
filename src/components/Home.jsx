@@ -295,6 +295,7 @@ const Presentes = styled.div`
         font-color: #c0c0c0;
         max-width: 50%;
     }
+    
     .preco {
         font-family: 'Playfair Display', serif;
         font-weight: 700;

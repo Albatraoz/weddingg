@@ -79,7 +79,7 @@ function Menu () {
                     <Link activeClass="active" to="presente" spy={true} smooth={true} offset={-70} duration={50}>LISTA DE PRESENTES</Link>
                     <Link activeClass="active" to="galeria" spy={true} smooth={true} offset={-70} duration={50}>GALERIA</Link>
                     <Link activeClass="active" to="local" spy={true} smooth={true} offset={-70} duration={50}>LOCAL</Link>
-                    <Link activeClass="active" to="" spy={true} smooth={true} offset={-70} duration={50}>PRESENÇA</Link>
+                    <Link activeClass="active" to="presenca" spy={true} smooth={true} offset={-70} duration={50}>PRESENÇA</Link>
                     {/* <a href="/recado">RECADO</a> */}
                 </div>
             </div>
